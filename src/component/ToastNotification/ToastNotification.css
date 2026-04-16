@@ -1,0 +1,155 @@
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.toast-notification {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  animation: slideInRight 0.3s ease-out;
+  pointer-events: auto;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+}
+
+.toast-notification.removing {
+  animation: slideOutRight 0.3s ease-out;
+}
+
+/* Success Toast */
+.toast-success {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.toast-success .toast-icon {
+  color: #ffffff;
+}
+
+/* Error Toast */
+.toast-error {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.toast-error .toast-icon {
+  color: #ffffff;
+}
+
+/* Warning Toast */
+.toast-warning {
+  background-color: #f59e0b;
+  color: #ffffff;
+}
+
+.toast-warning .toast-icon {
+  color: #ffffff;
+}
+
+/* Info Toast */
+.toast-info {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.toast-info .toast-icon {
+  color: #ffffff;
+}
+
+.toast-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast-message {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.toast-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.toast-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .toast-container {
+    top: 16px;
+    right: 16px;
+    left: 16px;
+  }
+
+  .toast-notification {
+    max-width: 100%;
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100vw);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOutRight {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(100vw);
+      opacity: 0;
+    }
+  }
+}

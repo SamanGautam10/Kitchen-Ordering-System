@@ -1,0 +1,95 @@
+# === Frontend (Node.js/Vite) ===
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Vite specific
+.vite/
+
+# Optional: if using TypeScript
+*.tsbuildinfo
+
+# Optional: if using ESLint
+.eslintcache
+
+# Optional: if using Prettier
+.prettiercache
+
+# Optional: if using Storybook
+storybook-static/
+
+# Optional: if using Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# Optional: if using Playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# === Backend (Django/Python) ===
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Static files
+staticfiles/
+test_*
+
+# Environment
+.env
+.env.local
+.env.*.local
+*.sh
+
+# Django
+*.log
+
+# Bat and log test files 
+.exe
+.bat
+
+# Dependencies
+.pnpm-store/
+
+# Environment variables (duplicate, already covered)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+coverage/
+
+# Windows
+Thumbs.db
