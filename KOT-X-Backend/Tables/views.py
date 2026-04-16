@@ -8,8 +8,6 @@ from rest_framework.decorators import (
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from decorator.role import role_required
-
 from .models import DiningTable
 from .serializer import TableSerializer
 
@@ -33,7 +31,6 @@ def get_table_by_id(request, pk):
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-# @role_required(["manager", "owner"])
 # @permission_classes([IsAuthenticated])
 @api_view(["PUT"])
 def update_table(request, pk):
